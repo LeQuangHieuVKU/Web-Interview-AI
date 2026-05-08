@@ -11,7 +11,8 @@ import { setUserData } from "./redux/userSlice";
 import InterviewHistory from "./pages/InterviewHistory";
 import Pricing from "./pages/Pricing";
 import InterviewReport from "./pages/InterviewReport";
-export const ServerURL = "http://localhost:8000";
+import { ServerUrl } from "./config";
+export const ServerURL = ServerUrl;
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {

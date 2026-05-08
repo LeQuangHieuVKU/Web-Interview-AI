@@ -1,25 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowLeft, FaCheckCircle } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import { motion } from "motion/react";
 import axios from "axios";
+import { useLocation, useNavigate } from "react-router-dom";
 import { ServerUrl } from "../config";
-import { useDispatch } from "react-redux";
-import { setUserData } from "../redux/userSlice";
 
 function Pricing() {
-  const navgigate = useNavigate();
+  const navigate = useNavigate();
+  const location = useLocation();
   const [selectedPlan, setSelectedPlan] = useState("free");
   const [loadingPlan, setLoadingPlan] = useState(null);
-  const dispatch = useDispatch();
   const MotionDiv = motion.div;
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const paymentStatus = params.get("payment");
+    const message = params.get("message");
+
+    if (!paymentStatus) {
+      return;
+    }
+
+    if (paymentStatus === "success") {
+      alert(message || "Thanh toán thành công. Credits đã được cập nhật.");
+    } else if (paymentStatus === "failed") {
+      alert(message || "Thanh toán thất bại. Vui lòng thử lại.");
+    }
+
+    navigate("/pricing", { replace: true });
+  }, [location.search, navigate]);
 
   const plans = [
     {
       id: "free",
       name: "Free Plan",
-      price: "$0",
+      price: "0đ",
+      amount: 0,
       credits: "100",
       description: "Perfect for beginners starting interview preparation.",
       features: [
@@ -33,7 +49,8 @@ function Pricing() {
     {
       id: "basic",
       name: "Starter Pack",
-      price: "$9.99",
+      price: "99,000đ",
+      amount: 99000,
       credits: "150",
       description: "Great for focused practice and skill development.",
       features: [
@@ -46,7 +63,8 @@ function Pricing() {
     {
       id: "pro",
       name: "Pro Plan",
-      price: "$19.99",
+      price: "199,000đ",
+      amount: 199000,
       credits: "650",
       description: "Best value for serious job preparation.",
       features: [
@@ -62,44 +80,22 @@ function Pricing() {
   const handlePayment = async (plan) => {
     try {
       setLoadingPlan(plan.id);
-      const amount = parseFloat(plan.price.replace("$", ""));
 
       const result = await axios.post(
         ServerUrl + "/api/payment/order",
         {
           planId: plan.id,
-          amount: amount,
+          amount: plan.amount,
           credits: plan.credits,
         },
         { withCredentials: true },
       );
 
-      const options = {
-        key: import.meta.env.VITE_RAZORPAY_KEY_ID,
-        amount: result.data.amount,
-        currency: "INR",
-        name: "Interview AI",
-        description: `${plan.name} - ${plan.credits} Credit Purchase`,
-        order_id: result.data.id,
+      if (!result.data?.paymentUrl) {
+        throw new Error("Không nhận được URL thanh toán VNPay");
+      }
 
-        handler: async function (response) {
-          const verifyPay = await axios.post(
-            ServerUrl + "/api/payment/verify",
-            response,
-            { withCredentials: true },
-          );
-          dispatch(setUserData(verifyPay.data.user));
-
-          alert("Payment Successful! Your credits have been updated.");
-          navgigate("/");
-        },
-        theme: {
-          color: "#10b981",
-        },
-      };
-
-      const rzp = new window.Razorpay(options);
-      rzp.open();
+      window.location.href = result.data.paymentUrl;
     } catch (error) {
       console.error(error);
       alert(
@@ -116,7 +112,7 @@ function Pricing() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-emerald-5 py-16 px-6">
       <div className="max-w-6xl mx-auto mb-14 flex items-start gap-4">
         <button
-          onClick={() => navgigate("/")}
+          onClick={() => navigate("/")}
           className="mt-2 p-3 rounded-full bg-white shadow hover:shadow-md transition"
         >
           <FaArrowLeft className="text-gray-600" />
@@ -177,6 +173,7 @@ function Pricing() {
                   </div>
                 ))}
               </div>
+
               {!plan.default && (
                 <button
                   disabled={loadingPlan === plan.id}
