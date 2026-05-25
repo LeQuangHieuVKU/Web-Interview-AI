@@ -79,13 +79,23 @@ export const analyzeResume = async (req, res) => {
     const messages = [
       {
         role: "system",
-        content: `Extract structured data from the resume. Return strictly JSON :
-          {
-            "role": "String",
-            "experience": "String",
-            "projects":["project1","project2"],
-            "skills": ["skill1","skill2"]
-          }`,
+        content: `Extract structured information from the resume.
+
+        Return ONLY valid JSON.
+
+        Format:
+        {
+          "role": "string",
+          "experience": "string",
+          "projects": ["project1", "project2"],
+          "skills": ["skill1", "skill2"]
+        }
+
+        Rules:
+        - Do not include markdown or explanations.
+        - If information is missing, return empty string or empty array.
+        - Keep values concise.
+        - Do not hallucinate information.`,
       },
       { role: "user", content: resumeText },
     ];
@@ -168,30 +178,32 @@ export const generateQuestions = async (req, res) => {
       {
         role: "system",
         content: `
-      You are a real human interviewer conducting a professional interview.
-
-      Speak in simple, natural English as if you are directly talking to the candidate.
+      You are a professional interviewer speaking naturally to a real candidate.
 
       Generate exactly 5 interview questions.
 
-      Strict Rules:
-      - Each question must contain between 15 and 25 words.
-      - Each question must be a single complete sentence.
-      - Do NOT number them.
-      - Do NOT add explanations.
-      - Do NOT add extra text before or after.
-      - One question per line only.
-      - Keep language simple and conversational.
-      - Questions must feel practical and realistic.
+      Rules:
+      - One question per line.
+      - No numbering.
+      - No explanations.
+      - No extra text before or after.
+      - Each question must contain 15 to 25 words.
+      - Use simple, conversational English.
+      - Avoid generic textbook wording.
+      - Questions should sound realistic and practical.
 
       Difficulty progression:
-      Question 1 → easy  
-      Question 2 → easy  
-      Question 3 → medium  
-      Question 4 → medium  
-      Question 5 → hard  
+      1 → easy
+      2 → easy
+      3 → medium
+      4 → medium
+      5 → hard
 
-      Make questions based on the candidate’s role, experience,interviewMode, projects, skills, and resume details.
+      Additional requirements:
+      - At least 2 questions must reference candidate projects, experience, or skills.
+      - At least 1 question must be situational.
+      - Avoid repeating sentence patterns.
+      - Questions should feel like a real live interview.
       `,
       },
       {
@@ -275,44 +287,51 @@ export const submitAnswer = async (req, res) => {
       {
         role: "system",
         content: `
-        You are a professional human interviewer evaluating a candidate's answer in a real interview.
+        You are a strict but fair professional interviewer evaluating a real interview answer.
 
-        Evaluate naturally and fairly, like a real person would.
+        Evaluate naturally and realistically.
 
-        Score the answer in these areas (0 to 10):
+        Score these categories from 0 to 10:
 
-        1. Confidence – Does the answer sound clear, confident, and well-presented?
-        2. Communication – Is the language simple, clear, and easy to understand?
-        3. Correctness – Is the answer accurate, relevant, and complete?
+        1. Confidence
+        - Does the answer sound confident and well-structured?
 
-        Rules:
+        2. Communication
+        - Is the answer clear, understandable, and professional?
+
+        3. Correctness
+        - Is the answer technically accurate, relevant, and complete?
+
+        Scoring Guidelines:
+        - Weak, vague, or incorrect answer → 0 to 4
+        - Partial understanding → 5 to 6
+        - Good practical answer → 7 to 8
+        - Strong, detailed, professional answer → 9 to 10
+
+        Important Rules:
+        - Do not give high scores without clear quality.
         - Be realistic and unbiased.
-        - Do not give random high scores.
-        - If the answer is weak, score low.
-        - If the answer is strong and detailed, score high.
-        - Consider clarity, structure, and relevance.
+        - Short answers should not receive high correctness scores.
+        - Consider relevance, clarity, detail, and professionalism.
 
         Calculate:
-        finalScore = average of confidence, communication, and correctness (rounded to nearest whole number).
+        finalScore = rounded average of confidence, communication, and correctness.
 
         Feedback Rules:
-        - Write natural human feedback.
         - 10 to 15 words only.
-        - Sound like real interview feedback.
-        - Can suggest improvement if needed.
-        - Do NOT repeat the question.
-        - Do NOT explain scoring.
-        - Keep tone professional and honest.
+        - Sound like real interviewer feedback.
+        - Mention one strength or one improvement.
+        - Avoid generic phrases like "Good job".
 
-        Return ONLY valid JSON in this format:
+        Return ONLY valid JSON:
 
         {
           "confidence": number,
           "communication": number,
           "correctness": number,
           "finalScore": number,
-          "feedback": "short human feedback"
-        }
+          "feedback": "short professional feedback"
+}
         `,
       },
       {
