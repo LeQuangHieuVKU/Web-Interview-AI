@@ -1,0 +1,589 @@
+1. Đặt vấn đề
+
+Trong bối cảnh thị trường lao động ngày càng cạnh tranh, đặc biệt đối với các vị trí thuộc lĩnh vực công nghệ thông tin, việc chuẩn bị cho phỏng vấn không chỉ dừng lại ở việc nắm kiến thức chuyên môn mà còn đòi hỏi khả năng trình bày, phản xạ, tư duy logic và sự tự tin khi trả lời câu hỏi. Thực tế cho thấy nhiều ứng viên có nền tảng kiến thức tốt nhưng vẫn gặp khó khăn khi bước vào buổi phỏng vấn thật vì thiếu môi trường luyện tập sát với thực tế. Họ thường không biết cách đánh giá mức độ phù hợp của câu trả lời, chưa quen với áp lực thời gian, và cũng khó tự nhận ra những điểm yếu trong phong thái hoặc cách diễn đạt của bản thân.
+
+Bên cạnh đó, các phương pháp luyện phỏng vấn truyền thống như tự học câu hỏi, trao đổi nhóm hoặc xem tài liệu tham khảo thường thiếu tính tương tác và cá nhân hóa. Bộ câu hỏi cố định không thể phản ánh đầy đủ tình huống thực tế, không điều chỉnh được theo vị trí ứng tuyển, kinh nghiệm của ứng viên hay nội dung trong CV. Điều này dẫn đến việc quá trình ôn luyện chưa đem lại hiệu quả cao, trong khi người học lại cần một công cụ có khả năng mô phỏng phỏng vấn, phản hồi tức thời và theo dõi tiến bộ sau từng lần thực hành.
+
+Xuất phát từ nhu cầu đó, đề tài "Interview AI" được xây dựng như một hệ thống hỗ trợ luyện phỏng vấn thông minh. Ứng dụng cho phép người dùng đăng nhập, nhập thông tin vai trò và kinh nghiệm, tải CV để phân tích nội dung, sau đó hệ thống tự động tạo bộ câu hỏi phỏng vấn phù hợp. Trong quá trình phỏng vấn, ứng dụng có chức năng đếm thời gian, ghi nhận câu trả lời, hỗ trợ tương tác bằng giọng nói, chấm điểm và tạo báo cáo kết quả chi tiết. Sau khi hoàn thành, người dùng có thể xem lịch sử các lần phỏng vấn và tải báo cáo để tự theo dõi sự tiến bộ của mình.
+
+Như vậy, vấn đề đặt ra của đề tài là làm thế nào xây dựng được một nền tảng web vừa có khả năng mô phỏng phỏng vấn chân thực, vừa có thể ứng dụng AI để tạo câu hỏi và đánh giá kết quả, đồng thời lưu trữ dữ liệu, quản lý người dùng và hỗ trợ mở rộng tính năng trong tương lai. Đây là cơ sở để hình thành hệ thống Interview AI với các chức năng phục vụ trực tiếp cho quá trình ôn luyện và phát triển kỹ năng phỏng vấn.
+
+2. Lý do chọn đề tài
+
+Đề tài được lựa chọn trước hết vì có tính thực tiễn cao. Nhu cầu chuẩn bị phỏng vấn ngày nay không chỉ xuất hiện ở sinh viên sắp ra trường mà còn ở những người đi làm muốn chuyển việc hoặc nâng cấp vị trí. Một công cụ luyện phỏng vấn hiệu quả sẽ giúp người dùng chủ động rèn luyện trước khi bước vào buổi phỏng vấn thật, từ đó giảm tâm lý lo lắng, cải thiện cách trình bày và tăng khả năng đưa ra câu trả lời mạch lạc, đúng trọng tâm.
+
+Thứ hai, đề tài phù hợp với xu hướng ứng dụng trí tuệ nhân tạo trong giáo dục và hỗ trợ nghề nghiệp. AI có thể đóng vai trò như một người phỏng vấn ảo, tự động sinh câu hỏi theo vai trò công việc, kinh nghiệm và nội dung CV của người dùng. Nhờ vậy, trải nghiệm luyện tập trở nên linh hoạt hơn, có tính cá nhân hóa cao hơn so với cách học truyền thống. Ngoài ra, việc AI đưa ra đánh giá và phản hồi sau mỗi câu trả lời giúp người học nhanh chóng nhận biết điểm mạnh, điểm yếu và điều chỉnh chiến lược ôn luyện một cách kịp thời.
+
+Thứ ba, đề tài này là một bài toán phù hợp để kết hợp nhiều công nghệ web hiện đại trong một hệ thống hoàn chỉnh. Dự án bao gồm cả frontend, backend, cơ sở dữ liệu, xác thực người dùng, xử lý tệp PDF, ghi nhận lịch sử, xuất báo cáo và tích hợp thanh toán. Điều này giúp đề tài không chỉ có giá trị sử dụng mà còn có ý nghĩa học tập cao, vì cho phép áp dụng nhiều kiến thức đã học vào một sản phẩm thực tế. Việc triển khai dự án cũng giúp rèn luyện tư duy thiết kế hệ thống, tổ chức mã nguồn, xử lý dữ liệu người dùng và tích hợp dịch vụ bên thứ ba.
+
+Ngoài ra, đề tài còn có khả năng mở rộng tốt trong tương lai. Hệ thống có thể tiếp tục phát triển thêm các chức năng như đánh giá sâu hơn theo từng kỹ năng, phân tích xu hướng tiến bộ theo thời gian, hỗ trợ nhiều ngôn ngữ, hoặc tích hợp thêm các mô hình AI mạnh hơn. Chính vì vậy, Interview AI là một lựa chọn phù hợp cả về mặt ứng dụng lẫn mặt kỹ thuật.
+
+3. Công cụ thực hiện
+
+Trong quá trình xây dựng hệ thống, nhóm đã sử dụng các công cụ và công nghệ sau:
+
+Frontend:
+
+- React: xây dựng giao diện người dùng theo hướng component hóa, dễ bảo trì và mở rộng.
+- Vite: công cụ bundling và dev server giúp khởi chạy dự án nhanh, tối ưu trải nghiệm phát triển.
+- Redux Toolkit: quản lý trạng thái người dùng và dữ liệu dùng chung trong toàn bộ ứng dụng.
+- React Router DOM: điều hướng giữa các màn hình như trang chủ, phỏng vấn, lịch sử và báo cáo.
+- Tailwind CSS: thiết kế giao diện nhanh, đồng nhất và dễ tùy biến theo từng màn hình.
+
+Backend:
+
+- Node.js: môi trường chạy JavaScript phía máy chủ.
+- Express: xây dựng API REST cho các chức năng đăng nhập, tạo phỏng vấn, nộp câu trả lời, xem lịch sử và thanh toán.
+
+Cơ sở dữ liệu:
+
+- MongoDB: lưu trữ dữ liệu người dùng, phiên phỏng vấn, kết quả và thông tin thanh toán.
+- Mongoose: định nghĩa schema, thao tác dữ liệu và kết nối với MongoDB một cách có cấu trúc.
+
+Xác thực và bảo mật:
+
+- JWT: tạo và kiểm tra token đăng nhập cho người dùng.
+- cookie-parser: đọc cookie từ trình duyệt để xác định phiên đăng nhập.
+- Middleware xác thực: kiểm tra quyền truy cập các API quan trọng, đảm bảo chỉ người dùng hợp lệ mới thao tác được dữ liệu cá nhân.
+
+Xử lý dữ liệu và tệp:
+
+- Multer: xử lý upload tệp PDF từ CV của người dùng.
+- pdfjs-dist: đọc và trích xuất nội dung từ file PDF để phục vụ bước phân tích CV.
+
+Tích hợp trí tuệ nhân tạo và dịch vụ ngoài:
+
+- OpenRouter service: sinh câu hỏi phỏng vấn và hỗ trợ phân tích nội dung theo ngữ cảnh người dùng.
+- Firebase: hỗ trợ lưu trữ media và có thể dùng cho các dịch vụ liên quan đến xác thực.
+- VNPay: tích hợp thanh toán để người dùng có thể mua thêm credits và nâng cấp gói sử dụng.
+
+Công cụ phát triển và kiểm thử:
+
+- Visual Studio Code: môi trường lập trình chính của dự án.
+- npm: quản lý thư viện và chạy các lệnh cài đặt, phát triển, build.
+- Postman: kiểm thử các API backend trong quá trình phát triển.
+
+Nhờ sự kết hợp của các công cụ trên, hệ thống có thể vận hành đầy đủ các chức năng quan trọng như đăng ký, đăng nhập, phân tích CV, tạo câu hỏi phỏng vấn, ghi âm và đánh giá câu trả lời, lưu lịch sử phỏng vấn, xuất báo cáo PDF và thanh toán nâng cấp tài khoản. Đây là nền tảng kỹ thuật cần thiết để xây dựng một ứng dụng luyện phỏng vấn thông minh, có tính thực tế và khả năng phát triển lâu dài.
+
+CHƯƠNG 2. PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
+
+2.1. Cơ sở lý thuyết
+
+2.1.1. Khái niệm hệ thống web full-stack
+
+Hệ thống web full-stack là hệ thống phần mềm được xây dựng đồng thời ở hai phía: phía giao diện người dùng (frontend) và phía xử lý nghiệp vụ, dữ liệu (backend). Frontend chịu trách nhiệm hiển thị nội dung, tiếp nhận tương tác từ người dùng và truyền yêu cầu lên máy chủ. Backend đảm nhiệm việc xử lý logic nghiệp vụ, xác thực người dùng, truy xuất cơ sở dữ liệu và trả kết quả cho giao diện.
+
+Trong thực tế, một ứng dụng full-stack thường được tổ chức theo các lớp rõ ràng: lớp giao diện, lớp xử lý trung gian, lớp dịch vụ và lớp dữ liệu. Cách tổ chức này giúp phân tách trách nhiệm giữa các thành phần, làm cho hệ thống dễ phát triển, dễ kiểm thử và dễ bảo trì hơn. Khi một chức năng mới được bổ sung, lập trình viên có thể thay đổi từng lớp mà không phải can thiệp toàn bộ ứng dụng.
+
+Đối với Interview AI, kiến trúc full-stack đặc biệt phù hợp vì hệ thống không chỉ hiển thị nội dung mà còn phải xử lý nhiều nghiệp vụ phức tạp như xác thực tài khoản, phân tích CV, sinh câu hỏi bằng AI, lưu lịch sử phỏng vấn, chấm điểm câu trả lời và xử lý thanh toán. Nếu không có kiến trúc phân lớp rõ ràng, ứng dụng sẽ khó mở rộng và khó bảo trì về sau.
+
+2.1.2. Khái niệm mô hình client-server
+
+Client-server là mô hình phổ biến trong các ứng dụng web hiện đại. Client là trình duyệt hoặc giao diện người dùng, gửi yêu cầu đến server thông qua các API. Server nhận yêu cầu, xử lý nghiệp vụ, truy vấn dữ liệu và trả về phản hồi dạng JSON hoặc kết quả điều hướng.
+
+Ưu điểm của mô hình này là cho phép tách biệt hoàn toàn giữa nơi người dùng thao tác và nơi hệ thống xử lý dữ liệu. Client tập trung vào trải nghiệm người dùng, còn server tập trung vào nghiệp vụ và dữ liệu. Nhờ đó, hệ thống có thể phục vụ nhiều client khác nhau như web, mobile hoặc các công cụ quản trị trong tương lai.
+
+Trong hệ thống này, React đóng vai trò client, còn Node.js và Express đóng vai trò server. Các yêu cầu từ giao diện như đăng nhập, tạo phiên phỏng vấn, gửi câu trả lời hay thanh toán đều được frontend chuyển tới backend thông qua HTTP request. Backend sau khi xử lý sẽ phản hồi dữ liệu cần thiết về frontend để cập nhật giao diện theo thời gian thực.
+
+2.1.3. Khái niệm REST API
+
+REST API là giao diện lập trình ứng dụng theo phong cách REST, cho phép các thành phần của hệ thống trao đổi dữ liệu qua các phương thức HTTP như GET, POST, PUT, DELETE. REST nhấn mạnh tính đơn giản, thống nhất và không lưu trạng thái giữa các request nếu không cần thiết.
+
+Trong một hệ thống web hiện đại, REST API thường được thiết kế theo tài nguyên. Ví dụ, tài nguyên người dùng, tài nguyên phiên phỏng vấn, tài nguyên thanh toán hay tài nguyên báo cáo đều có các endpoint riêng. Mỗi endpoint đảm nhiệm một chức năng rõ ràng và trả về dữ liệu có cấu trúc nhất quán, thường ở dạng JSON.
+
+Trong Interview AI, REST API được sử dụng để đăng nhập, lấy thông tin người dùng hiện tại, tạo phiên phỏng vấn, gửi câu trả lời, lấy lịch sử phỏng vấn, xem báo cáo và thực hiện thanh toán. REST API giúp chuẩn hóa luồng giao tiếp giữa frontend và backend, đồng thời hỗ trợ việc mở rộng hệ thống trong tương lai. Khi hệ thống phát triển thêm chức năng mới, việc bổ sung endpoint mới vẫn có thể thực hiện độc lập mà không làm ảnh hưởng các phần còn lại.
+
+2.1.4. Khái niệm giao diện người dùng trong ứng dụng web
+
+Giao diện người dùng là lớp mà người dùng nhìn thấy và tương tác trực tiếp. Trong ứng dụng web, giao diện không chỉ có vai trò hiển thị thông tin mà còn định hướng luồng sử dụng, giúp người dùng thực hiện tác vụ nhanh và chính xác. Một giao diện tốt cần rõ ràng, dễ hiểu, nhất quán, phản hồi nhanh và phù hợp với nhiều kích thước màn hình.
+
+Ở hệ thống Interview AI, giao diện được xây dựng theo hướng hiện đại và tối giản để người dùng tập trung vào việc luyện phỏng vấn thay vì phải học cách sử dụng công cụ. Các màn hình như trang chủ, trang phỏng vấn, trang lịch sử, trang báo cáo và trang thanh toán đều cần được bố trí hợp lý để người dùng chuyển đổi giữa các chức năng một cách mượt mà.
+
+2.1.5. Khái niệm cơ sở dữ liệu quan hệ đối tượng trong MongoDB
+
+MongoDB là cơ sở dữ liệu NoSQL lưu trữ dữ liệu dưới dạng tài liệu JSON-like. Khi kết hợp với Mongoose, dữ liệu được tổ chức theo schema rõ ràng, dễ quản lý nhưng vẫn linh hoạt hơn so với mô hình bảng quan hệ truyền thống. Dự án sử dụng MongoDB để lưu thông tin người dùng, phiên phỏng vấn, các câu hỏi, điểm số, phản hồi và giao dịch thanh toán. Cách tổ chức này phù hợp với dữ liệu có cấu trúc lồng nhau như một phiên phỏng vấn gồm nhiều câu hỏi và mỗi câu hỏi lại có điểm số, feedback, thời gian trả lời.
+
+Việc lựa chọn MongoDB có ý nghĩa quan trọng đối với bài toán này vì dữ liệu của một phiên phỏng vấn mang tính phân cấp. Một bản ghi phỏng vấn có thể chứa một mảng câu hỏi, mỗi câu hỏi lại chứa nhiều thuộc tính như câu trả lời, đánh giá, điểm số, độ tự tin hay mức độ chính xác. Nếu thiết kế theo mô hình tài liệu, việc lưu và truy xuất các cấu trúc lồng nhau như vậy sẽ linh hoạt hơn.
+
+Mongoose hỗ trợ xây dựng schema, kiểm tra dữ liệu đầu vào, tạo quan hệ giữa các collection và thao tác cơ sở dữ liệu một cách nhất quán. Nhờ đó, dữ liệu của hệ thống Interview AI được tổ chức rõ ràng, dễ bảo trì và phù hợp với các thao tác như tạo mới, cập nhật điểm, lưu lịch sử và truy vấn báo cáo.
+
+2.1.6. Khái niệm HTTP, cookie và phiên làm việc
+
+HTTP là giao thức nền tảng của web, cho phép client và server trao đổi dữ liệu theo mô hình request-response. Trong hệ thống web, mỗi hành động của người dùng như bấm nút đăng nhập, tạo phỏng vấn hay xem báo cáo đều được chuyển thành một request HTTP gửi tới server.
+
+Cookie là cơ chế lưu trữ nhỏ trên trình duyệt dùng để giữ lại thông tin phiên làm việc như token đăng nhập. Trong hệ thống này, cookie được sử dụng để lưu JWT, giúp người dùng không cần đăng nhập lại ở mỗi thao tác. Khi trình duyệt gửi request đến server, cookie sẽ được truyền kèm nếu tùy chọn phù hợp được bật, từ đó backend có thể nhận biết người dùng đang đăng nhập hay không.
+
+Phiên làm việc là trạng thái kết nối có ý nghĩa giữa người dùng và hệ thống trong một khoảng thời gian nhất định. Với ứng dụng Interview AI, phiên làm việc đặc biệt quan trọng vì nhiều chức năng chỉ cho phép thực hiện khi người dùng đã xác thực hợp lệ.
+
+2.1.7. Khái niệm xác thực và phân quyền
+
+Xác thực là quá trình kiểm tra người dùng có đúng là người đã đăng nhập hay không, còn phân quyền là quá trình xác định người dùng đó có được phép truy cập một chức năng hay không. Hệ thống sử dụng JWT lưu trong cookie để xác thực người dùng ở các API quan trọng. Các middleware kiểm tra đăng nhập đảm bảo rằng chỉ người dùng hợp lệ mới có thể tạo phỏng vấn, gửi câu trả lời, xem lịch sử và sử dụng các chức năng cá nhân.
+
+Về mặt nguyên lý, xác thực trả lời câu hỏi "người dùng này là ai", còn phân quyền trả lời câu hỏi "người dùng này có quyền làm gì". Trong hệ thống Interview AI, tất cả thao tác liên quan đến dữ liệu cá nhân đều phải đi qua lớp kiểm tra xác thực để tránh truy cập trái phép. Điều này giúp đảm bảo dữ liệu lịch sử phỏng vấn, báo cáo kết quả và thông tin thanh toán được bảo vệ.
+
+2.1.8. Khái niệm JWT
+
+JWT là viết tắt của JSON Web Token, một chuẩn phổ biến dùng để truyền thông tin xác thực giữa client và server dưới dạng token đã được ký số. JWT thường gồm ba phần: header, payload và signature. Nhờ có chữ ký số, server có thể kiểm tra tính toàn vẹn của token mà không cần lưu trạng thái đăng nhập phức tạp trên máy chủ.
+
+Trong dự án Interview AI, JWT được dùng để nhận diện người dùng sau khi đăng nhập thành công. Token được lưu trong cookie và được kiểm tra ở các API cần bảo vệ. Cách làm này giúp hệ thống vừa đơn giản về mặt triển khai vừa đáp ứng yêu cầu bảo mật cơ bản cho ứng dụng web.
+
+2.1.9. Khái niệm trí tuệ nhân tạo trong luyện phỏng vấn
+
+Trí tuệ nhân tạo trong dự án được dùng để tạo câu hỏi phỏng vấn dựa trên vai trò, kinh nghiệm, kỹ năng và nội dung CV của người dùng. Ngoài ra, AI còn hỗ trợ phân tích câu trả lời và đưa ra phản hồi. Việc áp dụng AI làm tăng mức độ cá nhân hóa, giúp quá trình luyện tập gần với phỏng vấn thực tế hơn so với việc dùng bộ câu hỏi cố định.
+
+Trong hệ thống Interview AI, AI không chỉ đóng vai trò sinh nội dung mà còn đóng vai trò hỗ trợ đánh giá và phản hồi. Điều này có ý nghĩa lớn vì người luyện phỏng vấn thường khó tự chấm điểm khách quan. AI giúp tạo ra bộ câu hỏi linh hoạt hơn, thay đổi theo vai trò công việc, mức kinh nghiệm và nội dung CV, từ đó tăng tính thực tế của buổi luyện tập.
+
+2.1.10. Khái niệm xử lý tài liệu PDF
+
+PDF là định dạng tài liệu phổ biến được sử dụng để lưu CV, hồ sơ năng lực hoặc các văn bản có cấu trúc cố định. Trong một hệ thống luyện phỏng vấn, việc đọc và trích xuất nội dung từ PDF là rất quan trọng vì CV thường chứa các thông tin then chốt như kinh nghiệm làm việc, dự án, kỹ năng và thành tích.
+
+Hệ thống Interview AI sử dụng cơ chế xử lý PDF để đọc file CV do người dùng tải lên, sau đó trích xuất nội dung văn bản nhằm phục vụ bước phân tích. Nhờ vậy, hệ thống có thể tạo câu hỏi bám sát hơn với hồ sơ thực tế của người dùng, thay vì chỉ dựa vào vai trò nhập tay.
+
+2.1.11. Khái niệm thanh toán điện tử
+
+Thanh toán điện tử là hình thức thanh toán thông qua cổng thanh toán trung gian hoặc dịch vụ ngân hàng số, cho phép người dùng thực hiện giao dịch trực tuyến thay vì thanh toán thủ công. Trong các ứng dụng có mô hình credits hoặc gói sử dụng, thanh toán điện tử giúp người dùng nạp thêm tài nguyên sử dụng một cách nhanh chóng.
+
+Trong Interview AI, thanh toán được tích hợp để người dùng có thể mua thêm credits khi cần mở rộng số lượt luyện phỏng vấn. Dịch vụ thanh toán có nhiệm vụ tạo đơn hàng, điều hướng người dùng tới cổng thanh toán, xác minh kết quả giao dịch và cập nhật credits vào tài khoản sau khi thanh toán thành công.
+
+2.1.12. Khái niệm hệ thống báo cáo và đánh giá kết quả
+
+Báo cáo là thành phần giúp tổng hợp dữ liệu xử lý thành thông tin có ý nghĩa. Trong hệ thống luyện phỏng vấn, báo cáo không chỉ hiển thị điểm tổng mà còn phải chỉ ra điểm mạnh, điểm yếu, mức độ hoàn thành từng câu hỏi và xu hướng cải thiện của người dùng.
+
+Đối với Interview AI, báo cáo sau phỏng vấn là phần rất quan trọng vì nó biến dữ liệu thô của từng câu trả lời thành phản hồi có giá trị sử dụng. Từ đó, người dùng có thể biết mình đang yếu ở đâu, cần cải thiện kỹ năng nào và nên luyện tập theo hướng nào trong những lần tiếp theo.
+
+2.2. Phân tích hệ thống
+
+2.2.1. Mục tiêu hệ thống
+
+Hệ thống Interview AI được xây dựng với mục tiêu hỗ trợ người dùng luyện phỏng vấn một cách chủ động, có hướng dẫn và có đánh giá sau mỗi phiên làm việc. Hệ thống cần đáp ứng các yêu cầu chính sau: quản lý tài khoản người dùng, phân tích CV, sinh bộ câu hỏi phỏng vấn, ghi nhận câu trả lời, tạo báo cáo kết quả, lưu lịch sử phỏng vấn và tích hợp thanh toán để mở rộng số lượt sử dụng.
+
+2.2.2. Phân tích người dùng
+
+Hệ thống hướng đến nhóm người dùng chính là ứng viên đang chuẩn bị phỏng vấn việc làm, đặc biệt là ứng viên trong lĩnh vực công nghệ thông tin. Ngoài ra, hệ thống còn có thể phục vụ sinh viên, người mới ra trường, người đi làm muốn đổi việc, hoặc bất kỳ ai muốn rèn luyện kỹ năng trả lời phỏng vấn. Người dùng cần một giao diện đơn giản, dễ thao tác nhưng vẫn đầy đủ chức năng cần thiết để luyện tập và theo dõi tiến trình.
+
+2.2.3. Phân tích chức năng
+
+Các chức năng chính của hệ thống bao gồm:
+
+- Đăng ký, đăng nhập và quản lý thông tin tài khoản.
+- Xem trạng thái người dùng hiện tại sau khi đăng nhập.
+- Tải CV lên để hệ thống trích xuất và phân tích nội dung.
+- Nhập vai trò, kinh nghiệm và chế độ phỏng vấn để tạo bộ câu hỏi phù hợp.
+- Thực hiện phỏng vấn theo từng câu hỏi với giới hạn thời gian.
+- Ghi nhận câu trả lời, chấm điểm và đưa ra phản hồi.
+- Hoàn thành phiên phỏng vấn và sinh báo cáo tổng kết.
+- Xem lịch sử các lần phỏng vấn đã thực hiện.
+- Mở báo cáo chi tiết của từng lần phỏng vấn và tải về dưới dạng PDF.
+- Thanh toán để mua thêm credits sử dụng hệ thống.
+
+2.2.4. Phân tích dữ liệu chính
+
+Các dữ liệu trọng tâm trong hệ thống gồm:
+
+- Người dùng: lưu tên, email, mật khẩu, số credits và thông tin liên quan đến quyền truy cập.
+- Phiên phỏng vấn: lưu vai trò, kinh nghiệm, chế độ phỏng vấn, nội dung CV và trạng thái hoàn thành.
+- Câu hỏi phỏng vấn: lưu nội dung câu hỏi, mức độ khó, thời gian giới hạn, câu trả lời, feedback và điểm số.
+- Thanh toán: lưu gói dịch vụ, số tiền, số credits mua, mã đơn hàng và trạng thái giao dịch.
+
+Các dữ liệu này liên kết chặt chẽ với nhau. Một người dùng có thể tạo nhiều phiên phỏng vấn; mỗi phiên phỏng vấn có nhiều câu hỏi; mỗi giao dịch thanh toán có liên quan đến một người dùng cụ thể.
+
+2.3. Thiết kế hệ thống
+
+2.3.1. Thiết kế kiến trúc tổng thể
+
+Hệ thống được thiết kế theo mô hình 3 lớp cơ bản gồm:
+
+- Lớp trình bày: giao diện React hiển thị các trang Home, Auth, Interview, History, Report và Pricing.
+- Lớp xử lý nghiệp vụ: backend Node.js/Express xử lý xác thực, tạo câu hỏi, chấm điểm, lưu lịch sử và thanh toán.
+- Lớp dữ liệu: MongoDB lưu người dùng, phỏng vấn và thanh toán.
+
+Kiến trúc này giúp tách rõ trách nhiệm của từng phần. Frontend chỉ tập trung giao diện và tương tác; backend xử lý logic; cơ sở dữ liệu lưu trữ dữ liệu bền vững. Cách tổ chức này cũng giúp hệ thống dễ thay đổi từng phần mà không ảnh hưởng toàn bộ ứng dụng.
+
+2.3.2. Thiết kế module
+
+Hệ thống có thể chia thành các module chính sau:
+
+- Module xác thực người dùng: đăng ký, đăng nhập, đăng xuất, lấy thông tin người dùng hiện tại.
+- Module quản lý phỏng vấn: phân tích CV, tạo câu hỏi, gửi câu trả lời, kết thúc phiên phỏng vấn.
+- Module báo cáo: tổng hợp điểm số, đánh giá từng câu hỏi, xuất PDF, xem lịch sử.
+- Module thanh toán: tạo đơn hàng VNPay, xác minh giao dịch, cộng credits.
+- Module giao diện: trang chủ, trang phỏng vấn, trang lịch sử, trang báo cáo, trang giá.
+
+2.4. Xây dựng biểu đồ use case
+
+2.4.1. Tác nhân hệ thống
+
+Trong hệ thống Interview AI, tác nhân chính là Người dùng. Người dùng tương tác với hệ thống thông qua trình duyệt để thực hiện các chức năng như đăng nhập, luyện phỏng vấn, xem lịch sử, xem báo cáo và thanh toán. Ngoài ra còn có tác nhân ngoài là VNPay, tham gia vào quá trình thanh toán, và dịch vụ AI, tham gia vào quá trình sinh câu hỏi và đánh giá nội dung.
+
+2.4.2. Danh sách use case chính
+
+- Đăng ký tài khoản.
+- Đăng nhập tài khoản.
+- Xem trang chủ.
+- Tải và phân tích CV.
+- Tạo phiên phỏng vấn.
+- Thực hiện phỏng vấn theo từng câu hỏi.
+- Gửi câu trả lời và nhận phản hồi.
+- Kết thúc phỏng vấn và xem báo cáo.
+- Xem lịch sử phỏng vấn.
+- Xem báo cáo chi tiết.
+- Thanh toán mua credits.
+- Đăng xuất tài khoản.
+
+2.4.3. Mô tả use case tổng quát
+
+2.4.3.1. Use case: Đăng nhập hệ thống
+
+Mục tiêu: cho phép người dùng truy cập vào hệ thống bằng tài khoản hợp lệ.
+
+Tác nhân chính: Người dùng.
+
+Tiền điều kiện: người dùng đã có tài khoản.
+
+Luồng chính:
+
+1. Người dùng mở trang đăng nhập.
+2. Người dùng nhập email và mật khẩu.
+3. Hệ thống kiểm tra thông tin đăng nhập.
+4. Nếu hợp lệ, hệ thống tạo phiên đăng nhập và trả về thông tin người dùng.
+5. Người dùng được chuyển vào hệ thống để sử dụng các chức năng khác.
+
+Luồng thay thế: nếu thông tin không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại.
+
+2.4.3.2. Use case: Phân tích CV
+
+Mục tiêu: trích xuất thông tin từ file CV để hỗ trợ tạo câu hỏi phù hợp.
+
+Tác nhân chính: Người dùng.
+
+Tiền điều kiện: người dùng đã đăng nhập.
+
+Luồng chính:
+
+1. Người dùng tải file CV định dạng PDF lên hệ thống.
+2. Hệ thống nhận tệp và đọc nội dung bằng bộ xử lý PDF.
+3. Hệ thống trích xuất các thông tin như vai trò, kinh nghiệm, dự án và kỹ năng.
+4. Dữ liệu được hiển thị lại để người dùng kiểm tra.
+
+Luồng thay thế: nếu tệp không hợp lệ hoặc không đọc được nội dung, hệ thống thông báo lỗi.
+
+2.4.3.3. Use case: Tạo phiên phỏng vấn
+
+Mục tiêu: sinh bộ câu hỏi phỏng vấn phù hợp với người dùng.
+
+Tác nhân chính: Người dùng.
+
+Tiền điều kiện: người dùng đã đăng nhập và còn đủ credits.
+
+Luồng chính:
+
+1. Người dùng nhập vai trò, mức kinh nghiệm và chế độ phỏng vấn.
+2. Người dùng có thể bổ sung thông tin từ CV đã phân tích.
+3. Hệ thống gửi dữ liệu sang service AI.
+4. AI sinh ra bộ câu hỏi phỏng vấn theo yêu cầu.
+5. Hệ thống lưu phiên phỏng vấn vào cơ sở dữ liệu.
+6. Hệ thống chuyển sang màn hình phỏng vấn.
+
+Luồng thay thế: nếu người dùng không đủ credits, hệ thống không tạo phiên mới và yêu cầu nạp thêm.
+
+2.4.3.4. Use case: Thực hiện phỏng vấn và gửi câu trả lời
+
+Mục tiêu: ghi nhận câu trả lời của người dùng cho từng câu hỏi.
+
+Tác nhân chính: Người dùng.
+
+Tiền điều kiện: phiên phỏng vấn đã được khởi tạo.
+
+Luồng chính:
+
+1. Hệ thống hiển thị câu hỏi hiện tại.
+2. Hệ thống kích hoạt bộ đếm thời gian.
+3. Người dùng trả lời bằng giọng nói hoặc nhập nội dung tương tác.
+4. Hệ thống gửi câu trả lời lên backend.
+5. Backend chấm điểm, sinh feedback và lưu kết quả.
+6. Hệ thống hiển thị nhận xét và chuyển sang câu hỏi tiếp theo.
+
+Luồng thay thế: nếu hết thời gian, hệ thống tự động ghi nhận và chuyển tiếp.
+
+2.4.3.5. Use case: Kết thúc phỏng vấn và xem báo cáo
+
+Mục tiêu: tổng hợp kết quả toàn bộ phiên phỏng vấn.
+
+Tác nhân chính: Người dùng.
+
+Tiền điều kiện: đã hoàn thành tất cả câu hỏi.
+
+Luồng chính:
+
+1. Hệ thống tính điểm tổng kết.
+2. Hệ thống lưu trạng thái phiên phỏng vấn là hoàn thành.
+3. Hệ thống hiển thị màn hình báo cáo.
+4. Người dùng xem điểm tổng, điểm từng kỹ năng và lời khuyên cải thiện.
+5. Người dùng có thể tải báo cáo PDF nếu cần.
+
+2.4.3.6. Use case: Thanh toán mua credits
+
+Mục tiêu: cho phép người dùng nạp thêm credits để tiếp tục sử dụng hệ thống.
+
+Tác nhân chính: Người dùng.
+
+Tác nhân phụ: VNPay.
+
+Luồng chính:
+
+1. Người dùng chọn gói thanh toán.
+2. Hệ thống tạo đơn hàng và chuyển sang VNPay.
+3. Người dùng thực hiện thanh toán trên cổng VNPay.
+4. VNPay trả kết quả về server.
+5. Hệ thống xác minh giao dịch và cộng credits cho người dùng.
+6. Người dùng nhận thông báo thanh toán thành công.
+
+2.5. Đặc tả use case
+
+2.5.1. Đặc tả use case đăng nhập
+
+- Tên use case: Đăng nhập.
+- Tác nhân: Người dùng.
+- Mục đích: xác thực tài khoản để vào hệ thống.
+- Tiền điều kiện: có tài khoản hợp lệ.
+- Hậu điều kiện: tạo phiên đăng nhập, truy cập được các chức năng riêng.
+- Luồng chính: nhập email, nhập mật khẩu, hệ thống kiểm tra, trả về thông tin người dùng.
+- Ngoại lệ: sai thông tin đăng nhập hoặc tài khoản không tồn tại.
+
+2.5.2. Đặc tả use case tạo phiên phỏng vấn
+
+- Tên use case: Tạo phiên phỏng vấn.
+- Tác nhân: Người dùng.
+- Mục đích: tạo bộ câu hỏi phỏng vấn cá nhân hóa.
+- Tiền điều kiện: đã đăng nhập, còn credits.
+- Hậu điều kiện: sinh ra danh sách câu hỏi và tạo bản ghi phỏng vấn.
+- Luồng chính: nhập vai trò, kinh nghiệm, mode, gửi lên server, hệ thống gọi AI, lưu dữ liệu và trả về interviewId.
+- Ngoại lệ: thiếu thông tin đầu vào hoặc credits không đủ.
+
+2.5.3. Đặc tả use case gửi câu trả lời
+
+- Tên use case: Gửi câu trả lời.
+- Tác nhân: Người dùng.
+- Mục đích: lưu câu trả lời cho từng câu hỏi.
+- Tiền điều kiện: phiên phỏng vấn đang hoạt động.
+- Hậu điều kiện: câu trả lời và điểm số được lưu lại.
+- Luồng chính: người dùng trả lời, hệ thống nhận answer, tính thời gian, đánh giá và trả feedback.
+- Ngoại lệ: không có câu trả lời hoặc hết thời gian.
+
+2.5.4. Đặc tả use case xem báo cáo
+
+- Tên use case: Xem báo cáo.
+- Tác nhân: Người dùng.
+- Mục đích: xem kết quả tổng hợp sau phỏng vấn.
+- Tiền điều kiện: phiên phỏng vấn đã được hoàn thành.
+- Hậu điều kiện: người dùng xem được điểm tổng, điểm từng câu hỏi và lời khuyên.
+- Luồng chính: chọn báo cáo, hệ thống truy vấn dữ liệu và hiển thị chi tiết.
+
+2.5.5. Đặc tả use case thanh toán
+
+- Tên use case: Thanh toán credits.
+- Tác nhân: Người dùng, VNPay.
+- Mục đích: nạp thêm credits vào tài khoản.
+- Tiền điều kiện: người dùng đã đăng nhập.
+- Hậu điều kiện: số credits được cập nhật nếu thanh toán thành công.
+- Luồng chính: chọn gói, tạo order, thanh toán, xác minh, cộng credits.
+- Ngoại lệ: giao dịch thất bại hoặc chữ ký không hợp lệ.
+
+2.6. Các sơ đồ class
+
+2.6.1. Lớp User
+
+Lớp User lưu thông tin người dùng gồm tên, email, mật khẩu và credits. Đây là lớp trung tâm vì mọi hoạt động như phỏng vấn, lịch sử và thanh toán đều gắn với một người dùng cụ thể.
+
+2.6.2. Lớp Interview
+
+Lớp Interview lưu thông tin phiên phỏng vấn gồm userId, role, experience, mode, resumeText, danh sách questions, finalScore và status. Lớp này thể hiện toàn bộ quá trình luyện phỏng vấn của một người dùng.
+
+2.6.3. Lớp Question trong Interview
+
+Mỗi phần tử trong questions gồm question, difficulty, timeLimit, answer, feedback, score, confidence, communication và correctness. Lớp này phản ánh chi tiết từng câu hỏi, câu trả lời và đánh giá tương ứng.
+
+2.6.4. Lớp Payment
+
+Lớp Payment lưu dữ liệu giao dịch gồm userId, planId, amount, credits, orderId, paymentId và status. Lớp này phục vụ việc thanh toán và cập nhật số credits cho người dùng.
+
+2.6.5. Quan hệ giữa các lớp
+
+- Một User có thể tạo nhiều Interview.
+- Một User có thể có nhiều Payment.
+- Một Interview chứa nhiều Question.
+- Mỗi Payment thuộc về một User cụ thể.
+
+2.7. Sơ đồ tuần tự
+
+2.7.1. Tuần tự đăng nhập
+
+Trình tự xử lý: Người dùng nhập thông tin đăng nhập -> Frontend gửi request lên backend -> Backend kiểm tra thông tin trong cơ sở dữ liệu -> Nếu hợp lệ, backend tạo cookie/token -> Frontend nhận kết quả và chuyển vào hệ thống.
+
+2.7.2. Tuần tự tạo phiên phỏng vấn
+
+Trình tự xử lý: Người dùng nhập role, experience, mode và có thể kèm CV -> Frontend gửi dữ liệu lên backend -> Backend gọi dịch vụ AI để sinh câu hỏi -> Backend lưu interview vào MongoDB -> Frontend nhận interviewId và hiển thị màn hình phỏng vấn.
+
+2.7.3. Tuần tự gửi câu trả lời
+
+Trình tự xử lý: Người dùng trả lời câu hỏi -> Frontend gửi answer và thời gian lên backend -> Backend chấm điểm, tạo feedback và cập nhật dữ liệu -> Frontend hiển thị phản hồi và chuyển câu hỏi tiếp theo.
+
+2.7.4. Tuần tự thanh toán
+
+Trình tự xử lý: Người dùng chọn gói -> Frontend gửi order request -> Backend tạo đơn trên VNPay -> Người dùng thanh toán -> VNPay trả kết quả về server -> Server xác minh và cập nhật credits -> Frontend hiển thị trạng thái thanh toán.
+
+2.8. Sơ đồ hoạt động
+
+2.8.1. Hoạt động tổng quát của hệ thống
+
+Luồng hoạt động tổng quát của hệ thống có thể mô tả như sau: người dùng truy cập trang chủ, đăng nhập, chọn luyện phỏng vấn hoặc xem lịch sử, tải CV nếu cần, tạo phiên phỏng vấn, trả lời từng câu hỏi, nhận feedback, hoàn thành phiên, xem báo cáo và quay lại lịch sử để theo dõi tiến độ. Nếu credits không đủ, người dùng có thể chuyển sang trang thanh toán để nạp thêm.
+
+2.8.2. Hoạt động của chức năng phỏng vấn
+
+Quá trình phỏng vấn bắt đầu từ việc tạo bộ câu hỏi, sau đó từng câu hỏi được hiển thị theo thứ tự. Mỗi câu hỏi có giới hạn thời gian riêng. Người dùng trả lời, hệ thống ghi nhận câu trả lời, chấm điểm và đưa ra phản hồi. Khi hết danh sách câu hỏi, hệ thống tổng hợp dữ liệu và tạo báo cáo cuối cùng.
+
+2.8.3. Hoạt động của chức năng thanh toán
+
+Người dùng chọn gói credits, hệ thống tạo đơn hàng và chuyển sang cổng VNPay. Sau khi thanh toán thành công, giao dịch được xác minh, credits của người dùng được cộng vào tài khoản và hệ thống trả về thông báo thành công. Nếu giao dịch lỗi, hệ thống thông báo thất bại và không thay đổi số credits.
+
+2.9. Kết luận chương
+
+Chương này đã trình bày cơ sở lý thuyết và quá trình phân tích thiết kế hệ thống Interview AI. Từ việc xác định nhu cầu thực tế của người dùng, phân tích chức năng, phân tách dữ liệu đến mô tả các use case, lớp, trình tự và hoạt động, hệ thống đã được định hình theo hướng rõ ràng và có tính triển khai thực tế. Đây là nền tảng để xây dựng chương tiếp theo về cài đặt, triển khai hoặc đánh giá hệ thống.
+
+2.10. Yêu cầu phi chức năng
+
+Bên cạnh các chức năng chính, hệ thống còn cần đáp ứng một số yêu cầu phi chức năng để bảo đảm trải nghiệm sử dụng tốt và vận hành ổn định:
+
+- Tính dễ sử dụng: giao diện phải đơn giản, trực quan, các bước thao tác rõ ràng để người dùng mới vẫn có thể sử dụng nhanh.
+- Tính phản hồi: các thao tác như đăng nhập, tạo câu hỏi, gửi câu trả lời và xem báo cáo cần được phản hồi kịp thời, hạn chế độ trễ.
+- Tính ổn định: hệ thống phải xử lý được các tình huống lỗi mạng, lỗi API, lỗi upload file hoặc lỗi xác minh thanh toán mà không làm gián đoạn toàn bộ phiên làm việc.
+- Tính bảo mật: thông tin người dùng, token đăng nhập, dữ liệu CV và dữ liệu thanh toán cần được bảo vệ đúng mức.
+- Tính mở rộng: kiến trúc hệ thống nên cho phép bổ sung thêm chức năng mới như nhiều chế độ phỏng vấn hơn, phân tích nâng cao hơn hoặc nhiều gói thanh toán hơn.
+- Tính tương thích: ứng dụng nên hoạt động tốt trên trình duyệt hiện đại và trên nhiều kích thước màn hình khác nhau.
+
+2.11. Ràng buộc và quy tắc nghiệp vụ
+
+Để hệ thống vận hành đúng mục tiêu, một số quy tắc nghiệp vụ cần được áp dụng nhất quán:
+
+- Người dùng phải đăng nhập trước khi truy cập các chức năng cá nhân như tạo phỏng vấn, xem lịch sử hoặc thanh toán.
+- Chỉ người dùng có đủ credits mới được tạo phiên phỏng vấn mới.
+- Mỗi phiên phỏng vấn có số lượng câu hỏi hữu hạn do hệ thống sinh ra, hiện tại là 5 câu hỏi.
+- Câu trả lời của người dùng cần được ghi nhận theo đúng thứ tự câu hỏi để bảo đảm tính nhất quán của báo cáo.
+- Khi hết thời gian của một câu hỏi, hệ thống có thể tự động chuyển sang bước xử lý tiếp theo.
+- Báo cáo chỉ được xem đầy đủ sau khi phiên phỏng vấn được đánh dấu hoàn thành.
+- Giao dịch thanh toán chỉ được cộng credits khi VNPay trả kết quả xác minh hợp lệ.
+
+2.12. Phân tích chi tiết các sơ đồ sử dụng trong hệ thống
+
+2.12.1. Mô tả chi tiết sơ đồ use case
+
+Nếu biểu diễn bằng sơ đồ use case, hệ thống sẽ đặt tác nhân Người dùng ở phía ngoài và nối tới các trường hợp sử dụng chính bên trong hệ thống. Tác nhân này tương tác với các use case: đăng ký, đăng nhập, tải CV, tạo phỏng vấn, trả lời câu hỏi, xem lịch sử, xem báo cáo và thanh toán.
+
+Quan hệ giữa các use case có thể hiểu như sau:
+
+- Đăng nhập là điều kiện tiên quyết để thực hiện các use case cá nhân.
+- Tạo phiên phỏng vấn có thể bao gồm bước phân tích CV nếu người dùng tải file lên.
+- Thực hiện phỏng vấn bao gồm việc hiển thị câu hỏi, đếm thời gian, ghi nhận câu trả lời và đánh giá.
+- Xem báo cáo là bước mở rộng sau khi phỏng vấn kết thúc.
+- Thanh toán là use case hỗ trợ khi credits không đủ cho phiên mới.
+
+2.12.2. Mô tả chi tiết sơ đồ class
+
+Trong sơ đồ class, các lớp chính không chỉ lưu dữ liệu mà còn thể hiện rõ quan hệ logic giữa các đối tượng. Lớp User là lớp gốc đại diện cho tài khoản cá nhân. Lớp Interview liên kết trực tiếp với User qua userId, cho biết một phiên phỏng vấn thuộc về ai. Trong Interview, thuộc tính questions là một mảng con mô tả nhiều câu hỏi, vì vậy mô hình dữ liệu có tính phân cấp.
+
+Lớp Payment cũng liên kết với User thông qua userId, giúp hệ thống theo dõi toàn bộ lịch sử mua credits của từng người dùng. Nếu nhìn từ góc độ thiết kế, mô hình này khá phù hợp với một ứng dụng có nhiều dữ liệu lồng nhau, vì mỗi cuộc phỏng vấn không phải chỉ là một bản ghi đơn lẻ mà là một tập hợp gồm thông tin đầu vào, danh sách câu hỏi, kết quả trả lời và điểm tổng kết.
+
+2.12.3. Mô tả chi tiết sơ đồ tuần tự
+
+Sơ đồ tuần tự của hệ thống thể hiện rõ thứ tự trao đổi giữa người dùng, frontend, backend, cơ sở dữ liệu và dịch vụ AI hoặc VNPay. Điều quan trọng trong sơ đồ này là mỗi bước đều đi từ giao diện sang server, sau đó server xử lý logic, rồi trả kết quả về giao diện.
+
+Ví dụ với luồng tạo phỏng vấn, trình tự có thể mô tả rõ như sau: người dùng nhập thông tin trên giao diện, frontend gửi request lên backend, backend kiểm tra credits và gọi dịch vụ AI, dịch vụ AI trả danh sách câu hỏi, backend lưu bản ghi phỏng vấn vào MongoDB, cuối cùng frontend nhận kết quả và chuyển người dùng sang màn hình phỏng vấn. Luồng này thể hiện sự phối hợp giữa nhiều thành phần và cho thấy điểm trung tâm của hệ thống là backend.
+
+2.12.4. Mô tả chi tiết sơ đồ hoạt động
+
+Sơ đồ hoạt động giúp mô tả các nhánh xử lý và điều kiện rẽ nhánh trong hệ thống. Đối với Interview AI, các nhánh quan trọng gồm:
+
+- Nhánh thành công khi đăng nhập hợp lệ.
+- Nhánh lỗi khi thông tin đăng nhập sai.
+- Nhánh thành công khi tạo phiên phỏng vấn và đủ credits.
+- Nhánh lỗi khi credits không đủ hoặc CV không hợp lệ.
+- Nhánh hoàn tất khi trả lời đủ tất cả câu hỏi.
+- Nhánh thanh toán thành công hoặc thất bại.
+
+Điểm quan trọng trong sơ đồ hoạt động là sự chuyển đổi trạng thái của phiên phỏng vấn. Phiên này bắt đầu ở trạng thái chưa hoàn thành, sau đó chuyển sang đang phỏng vấn, tiếp theo là đang chấm điểm, và cuối cùng là hoàn thành. Cách thể hiện này giúp làm rõ vòng đời của một phiên phỏng vấn trong hệ thống.
+
+2.13. Nhận xét về thiết kế hệ thống
+
+Từ quá trình phân tích và thiết kế, có thể thấy hệ thống Interview AI được tổ chức theo hướng khá rõ ràng và thực tế. Những phần chính như tài khoản người dùng, phỏng vấn, báo cáo và thanh toán đều được tách thành các module riêng, giúp dễ phát triển và kiểm thử.
+
+Thiết kế hiện tại cũng có ưu điểm là bám sát luồng nghiệp vụ thực tế của một ứng dụng luyện phỏng vấn: từ lúc người dùng chuẩn bị hồ sơ, tạo phiên luyện tập, thực hiện trả lời, nhận phản hồi cho đến khi xem lại lịch sử và nạp thêm credits nếu cần. Nhờ đó, hệ thống không chỉ mang tính trình diễn kỹ thuật mà còn có giá trị sử dụng thực tế.
+
+2.14. Kết thúc chương
+
+Chương 2 đã hoàn thiện phần phân tích và thiết kế hệ thống ở mức đầy đủ hơn, bao gồm cả lý thuyết nền tảng, phân tích chức năng, mô tả use case, đặc tả nghiệp vụ và cấu trúc dữ liệu chính. Đây là cơ sở trực tiếp để chuyển sang phần cài đặt chi tiết hoặc triển khai hệ thống ở chương tiếp theo.
+
+CHƯƠNG 3. KẾT QUẢ THỰC HIỆN, ĐÁNH GIÁ VÀ HƯỚNG PHÁT TRIỂN
+
+3.1. Kết quả đạt được
+
+Sau quá trình nghiên cứu, thiết kế và xây dựng, hệ thống Interview AI đã hoàn thành được các chức năng cốt lõi phục vụ mục tiêu luyện phỏng vấn trực tuyến. Cụ thể, hệ thống đã triển khai được giao diện người dùng cho các trang chính như trang chủ, đăng nhập, phỏng vấn, lịch sử phỏng vấn, báo cáo và thanh toán. Người dùng có thể truy cập hệ thống, xác thực tài khoản, tạo phiên phỏng vấn mới và sử dụng các chức năng liên quan một cách tương đối đầy đủ.
+
+Về mặt nghiệp vụ, hệ thống đã thực hiện được quy trình phân tích CV, sinh câu hỏi phỏng vấn theo vai trò và kinh nghiệm, ghi nhận câu trả lời, chấm điểm từng câu hỏi và tổng hợp báo cáo sau khi kết thúc phiên. Phần lịch sử phỏng vấn giúp người dùng theo dõi lại các lần luyện tập trước đó, từ đó đánh giá sự tiến bộ của bản thân theo thời gian. Đây là điểm quan trọng vì nó biến hệ thống từ một công cụ hỏi đáp đơn thuần thành một nền tảng luyện tập có khả năng ghi nhớ và phản hồi theo lịch sử sử dụng.
+
+Ngoài ra, hệ thống còn tích hợp được chức năng thanh toán credits qua VNPay để người dùng có thể mở rộng số lượt sử dụng khi cần. Điều này giúp mô hình vận hành của hệ thống linh hoạt hơn và phù hợp với dạng ứng dụng có cơ chế tài nguyên giới hạn. Việc lưu trữ dữ liệu bằng MongoDB, tổ chức API bằng Express và điều hướng giao diện bằng React đã tạo ra một hệ thống tương đối hoàn chỉnh, có thể chạy theo luồng nghiệp vụ thực tế.
+
+Về mặt trải nghiệm, ứng dụng đã hỗ trợ các tương tác cơ bản như đếm thời gian phỏng vấn, ghi âm hoặc nhập câu trả lời, hiển thị feedback sau từng câu hỏi và xuất báo cáo tổng kết ở dạng PDF. Điều này giúp người dùng không chỉ thực hành mà còn nhận được đánh giá cụ thể để cải thiện.
+
+3.2. Đánh giá kết quả
+
+3.2.1. Điểm đạt được
+
+Hệ thống Interview AI đã đạt được một số kết quả nổi bật sau:
+
+- Hoàn thành kiến trúc full-stack với frontend, backend và cơ sở dữ liệu tách biệt rõ ràng.
+- Xây dựng được cơ chế xác thực người dùng và bảo vệ các chức năng quan trọng bằng token.
+- Triển khai được quy trình tạo phiên phỏng vấn theo dữ liệu đầu vào của người dùng.
+- Có khả năng phân tích CV để làm đầu vào cho việc sinh câu hỏi phỏng vấn.
+- Tạo được bộ câu hỏi phỏng vấn có tính cá nhân hóa theo vai trò và kinh nghiệm.
+- Ghi nhận được câu trả lời, điểm số và phản hồi sau mỗi câu hỏi.
+- Sinh được báo cáo tổng kết sau khi hoàn thành phỏng vấn.
+- Lưu được lịch sử phỏng vấn để người dùng xem lại sau này.
+- Tích hợp được thanh toán VNPay để mua credits.
+- Xuất được báo cáo PDF phục vụ nhu cầu lưu trữ hoặc chia sẻ kết quả.
+
+Nhìn chung, các chức năng chính của đề tài đã đáp ứng được mục tiêu đặt ra ban đầu là xây dựng một ứng dụng luyện phỏng vấn thông minh, có khả năng hỗ trợ người dùng chuẩn bị tốt hơn cho các buổi phỏng vấn thực tế.
+
+3.2.2. Điểm chưa làm được và hạn chế
+
+Bên cạnh các kết quả đạt được, hệ thống vẫn còn một số điểm chưa hoàn thiện và hạn chế cần ghi nhận:
+
+- Mức độ đánh giá câu trả lời vẫn còn mang tính quy tắc và phụ thuộc vào logic chấm điểm hiện tại, chưa đạt mức phân tích ngôn ngữ sâu hoặc đánh giá chuyên môn toàn diện.
+- Giao diện đã hoàn thành chức năng nhưng vẫn còn có thể tối ưu thêm về tính trực quan, độ mượt và trải nghiệm người dùng trên một số màn hình nhỏ.
+- Chức năng AI hiện chủ yếu tập trung vào việc sinh câu hỏi và phản hồi cơ bản, chưa khai thác sâu các khả năng như đánh giá theo tiêu chí chi tiết, phân tích cảm xúc hoặc phát hiện lỗi trình bày.
+- Hệ thống chưa có bộ kiểm thử tự động đầy đủ cho toàn bộ backend và frontend, vì vậy việc bảo đảm chất lượng vẫn còn phụ thuộc khá nhiều vào kiểm thử thủ công.
+- Một số tình huống ngoại lệ như mất kết nối mạng, lỗi cổng thanh toán hoặc lỗi tệp đầu vào vẫn cần được tinh chỉnh thêm để có thông báo và xử lý thân thiện hơn.
+- Dữ liệu báo cáo và phân tích hiện tại mới ở mức cơ bản, chưa có các biểu đồ nâng cao về xu hướng tiến bộ, so sánh nhiều phiên hoặc phân tích kỹ năng theo chiều sâu.
+
+Các hạn chế trên chủ yếu xuất phát từ phạm vi thời gian và nguồn lực thực hiện đề tài, do đó hệ thống vẫn còn nhiều tiềm năng để phát triển thêm trong giai đoạn tiếp theo.
+
+3.3. Hướng phát triển
+
+Trong tương lai, hệ thống Interview AI có thể tiếp tục được mở rộng theo nhiều hướng khác nhau để nâng cao chất lượng và tính ứng dụng:
+
+- Nâng cao năng lực AI trong việc sinh câu hỏi và chấm điểm, có thể tích hợp mô hình mạnh hơn để đánh giá câu trả lời tự nhiên và chính xác hơn.
+- Bổ sung khả năng phân tích câu trả lời theo nhiều tiêu chí chi tiết hơn như độ rõ ràng, tính logic, mức độ liên quan, sự tự tin và khả năng tư duy phản biện.
+- Phát triển thêm thống kê và biểu đồ tiến bộ theo thời gian để người dùng dễ dàng theo dõi sự cải thiện qua nhiều lần phỏng vấn.
+- Hoàn thiện giao diện người dùng theo hướng hiện đại hơn, tối ưu cho cả máy tính và thiết bị di động.
+- Bổ sung thêm nhiều chế độ phỏng vấn như phỏng vấn hành vi, phỏng vấn tình huống hoặc phỏng vấn theo từng công ty cụ thể.
+- Tích hợp thêm nhiều ngôn ngữ để hỗ trợ người dùng quốc tế hoặc người học muốn luyện phỏng vấn bằng tiếng Anh chuyên sâu hơn.
+- Phát triển hệ thống thông báo và nhắc lịch để người dùng có thể quay lại luyện tập theo kế hoạch.
+- Tăng cường kiểm thử tự động cho API, giao diện và quy trình thanh toán để nâng cao độ ổn định của ứng dụng.
+- Mở rộng cơ chế quản trị để có thể quản lý người dùng, phiên phỏng vấn và giao dịch thanh toán hiệu quả hơn.
+
+Nếu tiếp tục được đầu tư và hoàn thiện, Interview AI có thể trở thành một nền tảng hỗ trợ luyện phỏng vấn có giá trị thực tế cao, không chỉ phục vụ người học mà còn có thể phát triển thành một sản phẩm ứng dụng rộng rãi trong lĩnh vực đào tạo và chuẩn bị nghề nghiệp.
+
+3.4. Kết luận chung
+
+Đề tài Interview AI đã xây dựng được một hệ thống luyện phỏng vấn có tính thực tiễn, kết hợp giữa công nghệ web hiện đại và trí tuệ nhân tạo để hỗ trợ người dùng trong quá trình chuẩn bị phỏng vấn. Mặc dù vẫn còn một số hạn chế nhất định, nhưng các chức năng quan trọng của hệ thống đã được triển khai và vận hành theo đúng định hướng ban đầu. Đây là nền tảng tốt để tiếp tục phát triển, cải tiến và mở rộng trong những giai đoạn sau.
+
+

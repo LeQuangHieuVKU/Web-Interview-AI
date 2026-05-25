@@ -315,11 +315,11 @@ function Step2Interview({ interviewData, onFinish }) {
   return (
     <div
       className="min-h-screen bg-linear-to-br from-emerald-50 via-white to-teal-100 
-      flex-items-center justify-center p-4 sm:p-6"
+      flex items-center justify-center p-4 sm:p-6"
     >
       <div
         className="w-full max-w-350 min-h-[80vh] bg-white rounded-3xl 
-        shadow-2xl border border-gray-200 flex flex-col lg:flex-row overflox-hidden"
+        shadow-2xl border border-gray-200 flex flex-col lg:flex-row overflow-hidden"
       >
         {/*Video Section*/}
         <div className="w-full lg:w-[35%] bg-white flex flex-col items-center p-6 space-y-6 border-r border-gray-200">
@@ -344,7 +344,7 @@ function Step2Interview({ interviewData, onFinish }) {
           )}
 
           {/*Time Area*/}
-          <div className="w-full max-w-md bg-white-border border-gray-200 rounded-2xl shadow-md p-6 space-y-5">
+          <div className="w-full max-w-md bg-white border border-gray-200 rounded-2xl shadow-md p-6 space-y-5">
             <div className="flex justify-between items-center">
               <span className="text-sm text-gray-500">Interview Status</span>
               {isAIPlaying && (
